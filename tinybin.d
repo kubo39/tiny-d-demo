@@ -1,5 +1,3 @@
-@system:
-
 void write(size_t p, size_t len)
 {
   asm
@@ -21,7 +19,6 @@ void exit()
     syscall;
   }
 }
-
 
 void main()
 {

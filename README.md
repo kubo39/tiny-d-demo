@@ -4,7 +4,7 @@
 $ ./build.sh
 DMD64 D Compiler v2.067.1
 
-+ dmd -c -noboundscheck -release tinybin.d
++ dmd -c tinybin.d
 + gcc tinybin.o -o payload -e _Dmain -T script.ld -Xlinker --gc-section -l:libphobos2.a -lpthread
 + objcopy -j combined -O binary payload payload.bin
 ++ nm -f posix payload
