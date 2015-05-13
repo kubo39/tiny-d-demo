@@ -1,5 +1,7 @@
 # Tiny D demo
 
+## Demo
+
 ```
 $ ./build.sh
 DMD64 D Compiler v2.067.1
@@ -30,3 +32,9 @@ DMD64 D Compiler v2.067.1
 + wc -c tinybin
 192 tinybin
 ```
+
+## Other Language Implementations
+
+- [Rust](http://mainisusuallyafunction.blogspot.de/2015/01/151-byte-static-linux-binary-in-rust.html)
+
+- [Nim](http://hookrace.net/blog/nim-binary-size/)

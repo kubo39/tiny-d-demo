@@ -1,4 +1,5 @@
 ;;  Custom ELF header for the binary.
+;;  Taken from https://github.com/kmcallister/tiny-rust-demo
 ;;  Inspired by http://www.muppetlabs.com/~breadbox/software/tiny/teensy.html
 
 bits 64
