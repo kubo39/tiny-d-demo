@@ -8,7 +8,7 @@ void main()
     mov RDX, 7;
     syscall;
     mov RAX, 60;  // EXIT
-    mov RDI, 0;
+    xor RDI, RDI;
     syscall;
   }
 }
