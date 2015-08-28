@@ -24,7 +24,7 @@ ehdr:
 ehdrsize  equ  $ - ehdr
 
 phdr:
-    dd  1               ; p_type & (e_phnux + e_phentsize + w_shnum + w_shstrndx)
+    dd  1               ; p_type & (e_phnum + e_shentsize + e_shnum + e_shstrndx)
     dd  7               ; p_flags = rwx
     dq  0               ; p_offset
     dq  $$, $$          ; p_vaddr, p_paddr
