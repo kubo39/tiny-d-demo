@@ -6,7 +6,7 @@ for d in dmd nasm; do
     which $d >/dev/null || (echo "Can't find $d, needed to build"; exit 1)
 done
 
-dmd | head -1
+dmd --version
 echo
 
 set -x
