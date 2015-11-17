@@ -1,3 +1,5 @@
+ENTRY(_Dmain)
+
 SECTIONS {
     . = 0x400070;
 

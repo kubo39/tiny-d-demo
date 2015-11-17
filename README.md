@@ -3,12 +3,11 @@
 ## Demo
 
 ```
-$ ./build.sh
 DMD64 D Compiler v2.069.0
 Copyright (c) 1999-2015 by Digital Mars written by Walter Bright
 
 + dmd -c tinybin.d
-+ gcc tinybin.o -o payload -e _Dmain -T script.ld -Xlinker --gc-section -l:libphobos2.a -lpthread
++ ld tinybin.o -o payload -T script.ld --gc-section
 + objcopy -j combined -O binary payload payload.bin
 ++ nm -f posix payload
 ++ grep _Dmain

@@ -12,7 +12,7 @@ echo
 set -x
 
 dmd -c tinybin.d
-gcc tinybin.o -o payload -e _Dmain -T script.ld -Xlinker --gc-section -l:libphobos2.a -lpthread
+ld tinybin.o -o payload -T script.ld --gc-section
 objcopy -j combined -O binary payload payload.bin
 ENTRY=$(nm -f posix payload | grep '_Dmain' | awk '{print $3}')
 nasm -f bin -o tinybin -D entry=0x$ENTRY elf.s
