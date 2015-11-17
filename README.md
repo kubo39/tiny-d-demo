@@ -3,6 +3,7 @@
 ## Demo
 
 ```
+$ ./build.sh
 DMD64 D Compiler v2.069.0
 Copyright (c) 1999-2015 by Digital Mars written by Walter Bright
 
