@@ -19,3 +19,4 @@ nasm -f bin -o tinybin -D entry=0x$ENTRY elf.s
 chmod +x tinybin
 hexdump -C tinybin
 wc -c tinybin
+./tinybin
