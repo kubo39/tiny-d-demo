@@ -1,4 +1,4 @@
-ENTRY(_Dmain)
+ENTRY(main)
 
 SECTIONS {
     . = 0x400070;

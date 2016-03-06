@@ -1,7 +1,8 @@
-void main()
+extern (C) void main()
 {
   asm
   {
+    naked;
     mov RAX, 1;  // WRITE
     mov RDI, 1;  // STDOUT
     mov RSI, 0x400008;
