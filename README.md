@@ -4,7 +4,7 @@
 
 ```
 $ ./build.sh
-DMD64 D Compiler v2.070.2
+DMD64 D Compiler v2.071.1
 Copyright (c) 1999-2015 by Digital Mars written by Walter Bright
 
 + dmd -c tinybin.d
