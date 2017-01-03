@@ -6,15 +6,15 @@
 
 ```
 $ ./build-dmd.sh
-DMD64 D Compiler v2.071.1
-Copyright (c) 1999-2015 by Digital Mars written by Walter Bright
+DMD64 D Compiler v2.072.2
+Copyright (c) 1999-2016 by Digital Mars written by Walter Bright
 
 + dmd -c tinybin.d
 + ld tinybin.o -o payload -T script.ld --gc-section
 + objcopy -j combined -O binary payload payload.bin
 ++ nm -f posix payload
-++ grep main
 ++ awk '{print $3}'
+++ grep main
 + ENTRY=0000000000400070
 + nasm -f bin -o tinybin -D entry=0x0000000000400070 elf.s
 + chmod +x tinybin
