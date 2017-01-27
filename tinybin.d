@@ -5,7 +5,7 @@ version(DigitalMars)
     __gshared void _d_dso_registry() {}
     __gshared void* __dmd_personality_v0;
 }
-version(Linux)
+version(linux)
 {
   enum WRITE = 1;
   enum EXIT = 60;
