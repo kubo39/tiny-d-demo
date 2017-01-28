@@ -7,7 +7,7 @@ org 0x00400000
 
 ehdr:
     db  0x7f, "ELF"     ; magic
-    db  2, 1, 1, 9      ; 64-bits, little endian, version 9(For FreeBSD, Linux load doesn't see!)
+    db  2, 1, 1, 9      ; 64-bits, little endian, version 9(For FreeBSD, Linux ignores it)
 
     db "Hello!", 0x0A, 0
 
