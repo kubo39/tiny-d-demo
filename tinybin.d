@@ -1,10 +1,5 @@
 extern (C):
 
-version(DigitalMars)
-{
-    __gshared void _d_dso_registry() {}
-    __gshared void* __dmd_personality_v0;
-}
 version(linux)
 {
   enum WRITE = 1;
