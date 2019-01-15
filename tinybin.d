@@ -14,9 +14,9 @@ version (FreeBSD)
     enum EXIT = 1;
 }
 
-void main()
+void main() pure nothrow @nogc
 {
-    asm
+    asm pure nothrow @nogc
     {
         naked;
         mov EAX, WRITE;
