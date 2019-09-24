@@ -6,18 +6,18 @@
 
 ```
 $ ./build-dmd.sh
-DMD64 D Compiler v2.077.0
-Copyright (c) 1999-2017 by Digital Mars written by Walter Bright
+DMD64 D Compiler v2.088.0
+Copyright (C) 1999-2019 by The D Language Foundation, All Rights Reserved written by Walter Bright
 
 + dmd -c tinybin.d
 + ld tinybin.o -o payload -T script.ld --gc-section
 + objcopy -j combined -O binary payload payload.bin
+++ nm --format=posix payload
 ++ grep main
 ++ awk '{print $3}'
-++ nm --format=posix payload
 + ENTRY=0000000000400070
 + nasm -f bin -o tinybin -D entry=0x0000000000400070 elf.s
-+ chmod +x tinybin
++ chmod u+x tinybin
 + hexdump -C tinybin
 00000000  7f 45 4c 46 02 01 01 09  48 65 6c 6c 6f 21 0a 00  |.ELF....Hello!..|
 00000010  02 00 3e 00 01 00 00 00  70 00 40 00 00 00 00 00  |..>.....p.@.....|
@@ -39,17 +39,17 @@ Hello!
 
 ```
 $ ./build-ldc.sh
-LDC - the LLVM D compiler (1.4.0):
+LDC - the LLVM D compiler (1.17.0):
 
 + ldc2 -Os -c tinybin.d
 + ld tinybin.o -o payload -T script.ld --gc-section
 + objcopy -j combined -O binary payload payload.bin
-++ nm -f posix payload
+++ nm --format=posix payload
 ++ grep main
 ++ awk '{print $3}'
 + ENTRY=0000000000400070
 + nasm -f bin -o tinybin -D entry=0x0000000000400070 elf.s
-+ chmod +x tinybin
++ chmod u+x tinybin
 + hexdump -C tinybin
 00000000  7f 45 4c 46 02 01 01 09  48 65 6c 6c 6f 21 0a 00  |.ELF....Hello!..|
 00000010  02 00 3e 00 01 00 00 00  70 00 40 00 00 00 00 00  |..>.....p.@.....|
