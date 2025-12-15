@@ -11,7 +11,7 @@ echo
 
 set -x
 
-ldc2 -Os -c tinybin.d
+ldc2 -Os --checkaction=halt -c tinybin.d
 ld tinybin.o -o payload -T script.ld --gc-section
 objcopy -j combined -O binary payload payload.bin
 ENTRY=$(nm --format=posix payload | grep 'main' | awk '{print $3}')
